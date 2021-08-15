@@ -4,9 +4,8 @@ $(".btn").click(()=>{
     function randomNum(){
         return Math.round(Math.random()*(hex.length-1));
     }
-    var hexStr="#";
-    for(var i=0; i<=5; i++){
-        console.log(hexStr);
+    let hexStr="#";
+    for(let i=0; i<=5; i++){
         hexStr+=""+hex[randomNum()];
     }
     $('body').css("background-color", hexStr);
