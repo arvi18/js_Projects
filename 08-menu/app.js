@@ -1,3 +1,4 @@
+/// <reference path="D:\codin\WebD\Js\Node.js\typings\globals\jquery\index.d.ts" />
 const menu = [
   {
     id: 1,
