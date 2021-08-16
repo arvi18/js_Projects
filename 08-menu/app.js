@@ -104,5 +104,5 @@ let displayMenu=menu.map(function(item){
    </div>
    </article>`
 });
-displayMenu=displayMenu.join("\n")
-$(".section-center").html(displayMenu)
+displayMenu=displayMenu.join("\n");
+$(".section-center").html(displayMenu);
