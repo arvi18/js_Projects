@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    background-size: 100vw 100vh;
+    color: white;
+    font-family: poppins;
+}
+
+header, form{
+    min-height: 20vh;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+form button{
+    color: #d88771;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+form button:hover{
+    color: #ffffff;
+    background: #d88771;
+}
+.todo-container{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.todo-container li{
+    list-style-type: none;
+}
+.todo-item{
+    margin-right: 10vw;
+}
+.btn{
+    text-align: center;
+    margin: auto;
+}
+.proc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 30%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.3rem;
+}
+
+
+.complete-button{
+    margin: 0 0.1rem;
+    color: rgb(255, 187, 0);
+    background: rgb(255, 255, 255);
+    border: 3px solid rgba(146, 114, 114, 0.205);
+    padding: 2px;
+}
+.complete-button:hover{
+    color: rgb(255, 252, 245);
+    background: rgb(255, 187, 0);
+}
