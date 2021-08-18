@@ -44,10 +44,6 @@ form button:hover{
 .todo-item{
     margin-right: 10vw;
 }
-.btn{
-    text-align: center;
-    margin: auto;
-}
 .proc{
     display: flex;
     justify-content: space-between;
@@ -59,16 +55,21 @@ form button:hover{
     color: black;
     font-size: 1.3rem;
 }
-
-
-.complete-button{
+#check, #trash{
     margin: 0 0.1rem;
+    cursor: pointer;
     color: rgb(255, 187, 0);
     background: rgb(255, 255, 255);
     border: 3px solid rgba(146, 114, 114, 0.205);
     padding: 2px;
 }
-.complete-button:hover{
+#check:hover, #trash:hover{
     color: rgb(255, 252, 245);
     background: rgb(255, 187, 0);
+}
+.crossed{
+    text-decoration: line-through;
+}
+.trashed{
+    display: none;
 }
