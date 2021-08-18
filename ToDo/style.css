@@ -69,6 +69,7 @@ form button:hover{
 }
 .crossed{
     text-decoration: line-through;
+    opacity: 0.6;
 }
 .trashed{
     display: none;
