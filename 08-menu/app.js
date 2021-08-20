@@ -1,7 +1,6 @@
 /// <reference path="D:\codin\WebD\Js\Node.js\typings\globals\jquery\index.d.ts" />
 
 // for(let i=1; i<=(menu.length-1);i++){
-//   console.log(displayMenu[i])
 //   $(displayMenu[i]).appendTo(".section-center");
 // }
 
@@ -79,17 +78,8 @@ const menu = [
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
 ];
-
-
-$(".filter-btn").click(function(){
-  let items=menu.filter(item=>item.category==this.id)
-  if(items.length==0){
-    items=menu
-  }
-  console.log(items)
-})
-
-let displayMenu=menu.map(function(item){
+var items=menu;
+displayMenu=items.map(function(item){
   return `<article class="menu-item">
    <img class="photo" src="${item.img}" alt="img">
    <div class="item-info">
@@ -101,6 +91,27 @@ let displayMenu=menu.map(function(item){
    </div>
    </article>`
 });
-
 displayMenu=displayMenu.join("\n");
 $(".section-center").html(displayMenu);
+
+$(".filter-btn").click(function(){
+  items=menu.filter(item=>item.category==this.id)
+  if(items.length==0){
+    items=menu
+  }
+
+let displayMenu=items.map(function(item){
+  return `<article class="menu-item">
+   <img class="photo" src="${item.img}" alt="img">
+   <div class="item-info">
+     <header>
+       <h4>${item.title}</h4>
+     <h4 class="price">${item.price}$</h4>
+     </header>
+     <p class="item-text">${item.desc}</p>
+   </div>
+   </article>`
+});
+displayMenu=displayMenu.join("\n");
+$(".section-center").html(displayMenu);
+})
