@@ -1,4 +1,10 @@
 /// <reference path="D:\codin\WebD\Js\Node.js\typings\globals\jquery\index.d.ts" />
+
+// for(let i=1; i<=(menu.length-1);i++){
+//   console.log(displayMenu[i])
+//   $(displayMenu[i]).appendTo(".section-center");
+// }
+
 const menu = [
   {
     id: 1,
@@ -75,11 +81,12 @@ const menu = [
 ];
 
 
-$(".filter-btn").click(function uhmm(){
-  const items=menu.filter(item=>item.category==this.id)
+$(".filter-btn").click(function(){
+  let items=menu.filter(item=>item.category==this.id)
   if(items.length==0){
     items=menu
   }
+  console.log(items)
 })
 
 let displayMenu=menu.map(function(item){
@@ -94,13 +101,6 @@ let displayMenu=menu.map(function(item){
    </div>
    </article>`
 });
-
-// for(let i=1; i<=(menu.length-1);i++){
-//   console.log(displayMenu[i])
-//   $(displayMenu[i]).appendTo(".section-center");
-// }
-// let items=[]
-
 
 displayMenu=displayMenu.join("\n");
 $(".section-center").html(displayMenu);
