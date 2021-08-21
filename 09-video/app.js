@@ -9,3 +9,5 @@ switchBtn.click(()=>{
     document.querySelector(".video-container").pause())
     :(switchBtn.addClass("slide"),document.querySelector(".video-container").play())
 })
+
+this.addEventListener("load", ()=>$(".preloader").addClass("hide-preloader"))
