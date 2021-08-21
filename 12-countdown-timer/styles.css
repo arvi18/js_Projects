@@ -69,7 +69,11 @@ Global Styles
 }
 body {
   font-family: var(--ff-secondary);
-  background: var(--clr-grey-10);
+  background: url(./bday.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+  background-size: cover;
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -180,12 +184,18 @@ Countdown Timer
 .gift-img {
   margin-bottom: 2rem;
 }
-.gift-info h3 {
-  text-transform: uppercase;
+.gift-info h2 {
+  /* text-transform: uppercase; */
+  letter-spacing: 0.4rem;
   color: var(--clr-primary-3);
+  line-height: 3.8rem;
 }
 .gift-info p {
-  color: var(--clr-grey-6);
+  color: #ffffff;
+  background: #00000017;
+  padding: 1rem;
+  font-weight: bolder;
+  text-shadow:0 0 7px rgb(132, 3, 252);
 }
 .date {
   color: var(--clr-grey-5);
@@ -205,6 +215,25 @@ Countdown Timer
 }
 .gift-info p {
   margin: 2rem 0;
+}
+#bday-h1{
+  font-size: larger;
+  color: rgb(255, 255, 255);
+  text-shadow:
+    0 0 7px rgb(114, 43, 43),
+    0 0 10px rgb(116, 0, 0),
+    0 0 21px rgb(255, 0, 0),
+    0 0 42px rgb(255, 1, 200),
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+.gift-info {
+  padding: 4vw;
+  border: 8px solid rgb(255, 255, 255);
+  border-radius: 0.8rem;
+  background: rgba(95, 205, 248, 0.253);
 }
 .deadline {
   display: flex;
