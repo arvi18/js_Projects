@@ -11,13 +11,29 @@ $("#date").html(dateYear)
 $(".nav-toggle").click(function(){
     // $(".links-container").toggleClass("show-links")
     const linksHeight=document.querySelector(".links").getBoundingClientRect().height;
-    console.log('linksHeight:', linksHeight)
     const conatainerHeight=document.querySelector(".links-container").getBoundingClientRect().height;
-    console.log('conatainerHeight:', conatainerHeight)
+    if(conatainerHeight===0){
+        $(".links-container").css("height", `${linksHeight}px`)
+    }else{
+        $(".links-container").css("height", `0px`)
+    }
 });
 
 // ********** fixed navbar ************
-
+$(this).scroll(()=>{
+    let scrollHeight=this.pageYOffset
+    let navHeight=document.querySelector("#nav").getBoundingClientRect().height;
+    if(scrollHeight>=navHeight){
+        document.querySelector("#nav").classList.add("fixed-nav");
+    }else{
+        document.querySelector("#nav").classList.remove("fixed-nav");
+    }
+    if(scrollHeight>500){
+        $(".top-link").addClass("show-link")
+    }else{
+        $(".top-link").removeClass("show-link")
+    }
+});
 // ********** smooth scroll ************
 // select links
 
@@ -29,5 +45,5 @@ $(".nav-toggle").click(function(){
 
 
 
-(".links-container")
+
 $(".links")
