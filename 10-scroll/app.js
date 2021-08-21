@@ -5,10 +5,29 @@
 //offsetTop - A Number, representing the top position of the element, in pixels
 
 // ********** set date ************
-
+dateYear=new Date().getFullYear(); 
+$("#date").html(dateYear)
 // ********** close links ************
+$(".nav-toggle").click(function(){
+    // $(".links-container").toggleClass("show-links")
+    const linksHeight=document.querySelector(".links").getBoundingClientRect().height;
+    console.log('linksHeight:', linksHeight)
+    const conatainerHeight=document.querySelector(".links-container").getBoundingClientRect().height;
+    console.log('conatainerHeight:', conatainerHeight)
+});
 
 // ********** fixed navbar ************
 
 // ********** smooth scroll ************
 // select links
+
+
+
+
+
+
+
+
+
+(".links-container")
+$(".links")
