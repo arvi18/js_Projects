@@ -47,21 +47,12 @@ $(".scroll-link").click(function(e){
     let position=element.offsetTop
     if(!fixedNav){
         position-=navHeight
+    }if(navHeight>82){
+        position+=containerHeight
     }
     window.scrollTo({
         left:0,
         top: position-navHeight,
     });
-    document.querySelector(".links-container").style.height=0;
+    $(".links-container").css("height", 0);
 });
-
-
-
-
-
-
-
-
-
-
-$(this).attr("href")
