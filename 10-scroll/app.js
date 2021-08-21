@@ -36,6 +36,15 @@ $(this).scroll(()=>{
 });
 // ********** smooth scroll ************
 // select links
+$(".scroll-link").click(function(e){
+    e.preventDefault()
+    let hrefToId=$(this).attr('href').slice(1)
+    window.scrollTo({
+        left:0,
+        top:$("#"+ hrefToId).offset().top,
+    })
+    document.querySelector(".links-container").style.height=0;
+});
 
 
 
@@ -46,4 +55,4 @@ $(this).scroll(()=>{
 
 
 
-$(".links")
+$(this).attr("href")
