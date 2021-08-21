@@ -38,11 +38,20 @@ $(this).scroll(()=>{
 // select links
 $(".scroll-link").click(function(e){
     e.preventDefault()
-    let hrefToId=$(this).attr('href').slice(1)
+    let hrefToId=e.currentTarget.getAttribute("href").slice(1)
+    const element=document.getElementById(hrefToId)
+    const navHeight= document.querySelector("#nav").getBoundingClientRect().height;
+    console.log('navHeight:', navHeight)
+    const containerHeight=document.querySelector(".links-container").getBoundingClientRect().height;
+    const fixedNav=document.querySelector("#nav").classList.contains("fixed-nav")
+    let position=element.offsetTop
+    if(!fixedNav){
+        position-=navHeight
+    }
     window.scrollTo({
         left:0,
-        top:$("#"+ hrefToId).offset().top,
-    })
+        top: position-navHeight,
+    });
     document.querySelector(".links-container").style.height=0;
 });
 
