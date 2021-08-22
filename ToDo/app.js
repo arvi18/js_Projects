@@ -8,6 +8,7 @@ $(".todo-button").click((e)=>{
         console.log($(this).closest('.proc').toggleClass("crossed"))
     });
     $("#trash").click(function(){
-        $(this).closest('.proc').remove();
+        $(this).closest('.proc').fadeOut(600);
+        setTimeout(()=>$(this).closest('.proc').remove(), 700)
     });
 });
