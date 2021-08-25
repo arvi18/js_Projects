@@ -17,6 +17,5 @@ $("#filter-todo").click(function(){
     const todos=$("#filter-todo  > option:selected");
     todos.val()==="all" ? $(".proc").removeClass("trashed")
     : todos.val()==="completed" ? ($(".proc").removeClass("trashed"), $(".proc").not(".crossed").addClass("trashed") )
-    : todos.val()==="uncompleted" ? ($(".proc").removeClass("trashed"), $(".crossed").addClass("trashed"))  : console.log('done') 
-
+    : todos.val()==="uncompleted" ? ($(".proc").removeClass("trashed"), $(".crossed").addClass("trashed"))  : console.log('totka hein dosto!') 
 })
