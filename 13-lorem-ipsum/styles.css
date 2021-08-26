@@ -156,6 +156,9 @@ p {
   background: var(--clr-primary-8);
   border-color: var(--clr-primary-8);
 }
+.btn-random{
+  margin-left: .4rem;
+}
 /* section */
 .section {
   padding: 5rem 0;
