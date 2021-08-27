@@ -2,3 +2,6 @@
 $(".sidebar-toggle").click(()=>{
     $(".sidebar").toggleClass("show-sidebar")
 });
+$(".close-btn").click(()=>{
+    $(".sidebar").toggleClass("show-sidebar")
+});
