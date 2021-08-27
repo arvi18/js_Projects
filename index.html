@@ -9,25 +9,33 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>15-Basic js implementation</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
         body{
-            background: linear-gradient(rgba(255, 126, 233, 0.507), rgb(52, 150, 145));;
-            margin: 10vh 25vw;
+            background: linear-gradient(rgba(255, 103, 230, 0.658), rgba(116, 245, 238, 0.63));;
+            margin: 0 10%;
         }
         .links{
             display: flex;
             flex-direction: column;
-            background: linear-gradient(rgba(255, 126, 233, 0.507), rgb(52, 150, 145));
-            margin: 10%;
+            background: linear-gradient(rgba(252, 57, 219, 0.63), rgba(52, 156, 151, 0.342));
+            margin: 20%;
             padding: 2.3rem;
             border-radius: .4rem;
-            /* box-shadow: .1rem .1rem .5rem .1rem; */
             box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
         }
         .link{
             text-decoration: none;
-            color: white;
+            color: rgb(255, 255, 255);
             font-size: 1.6rem;
             font-family: poppins;
+        }
+        @media all and (max-width:730px){
+            .links{
+                margin: 10%;
+            }
         }
     </style>
 </head>
